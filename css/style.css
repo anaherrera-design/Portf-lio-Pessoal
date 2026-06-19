@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #040303;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background-color: #000000;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1200px;
+  margin:auto;
+}
+
+.logo{
+  margin-bottom:0;
+  color:white;
+  font-size: 35px;
+}
+
+.menu{
+  display:flex;
+  gap:20px;
+}
+
+.menu > li {
+  display: inline-block;
+  position: relative;
+  margin: 0 15px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  background-color: #0f6e22;
+  border-radius: 8px;
+}
+
+/* SUBMENU */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #1d2e1a;
+  list-style: none;
+  width: 180px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.submenu li {
+  border-bottom: 1px solid #395137;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+/* BANNER */
+#banner {
+  background-image: url('../img/bannerp.png');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  text-align: center;
+  padding-top: 150px;
+  color: white;
+}
+
+.banner-texto h1 {
+  font-size: 48px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.banner-texto p {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.carousel{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+}
+
+.carousel-track{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  padding:10px;
+}
+
+.carousel-track::-webkit-scrollbar{
+  display:none;
+}
+
+.item{
+  min-width:200px;
+  text-align:center;
+}
+
+.item img{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:10px;
+}
+
+.prev,
+.next{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  font-size:20px;
+}
+/* SEÇÕES */
+.secao {
+  width: 90%;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.secao h2 {
+  margin-bottom: 20px;
+  color: #0a4301;
+}
+
+.foto-perfil {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid #0A4301FF;
+}
+/* LISTAS */
+.secao ul {
+  list-style: none;
+}
+
+.secao ul li {
+  background-color: #e5e7eb;
+  margin: 10px auto;
+  padding: 12px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+/* GALERIA */
+.galeria {
+  text-align: center;
+}
+
+.card {
+  width: 300px;
+  display: inline-block;
+  margin: 15px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0;
+}
+
+.card a {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  background-color: #0A4301FF;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.card a:hover {
+  background-color: #149f16;
+}
+
+/* FORMULÁRIO */
+form {
+  width: 70%;
+  margin: auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form textarea {
+  height: 120px;
+}
+
+button {
+  background-color: #0A4301FF;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #017318;
+}
+
+/* FOOTER */
+footer {
+  background-color: #060706;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+
+  .menu > li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .submenu {
+    position: static;
+    width: 100%;
+  }
+
+  .banner-texto h1 {
+    font-size: 32px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .secao ul li {
+    width: 100%;
+  }
+}
